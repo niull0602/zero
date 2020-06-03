@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.zero.mapper.PublishHomeworkMapper">
+  <resultMap id="BaseResultMap" type="com.example.zero.pojo.PublishHomework">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="homework_name" jdbcType="VARCHAR" property="homeworkName" />
+    <result column="class_id" jdbcType="BIGINT" property="classId"/>
+    <result column="mark" jdbcType="SMALLINT" property="mark" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="teacher_file_name" jdbcType="VARCHAR" property="teacherFileName" />
+    <result column="teacher_file_url" jdbcType="VARCHAR" property="teacherFileUrl" />
+  </resultMap>
+
+  <delete id="deleteAll" >
+    DELETE FROM t_publish_homework
+  </delete>
+</mapper>
